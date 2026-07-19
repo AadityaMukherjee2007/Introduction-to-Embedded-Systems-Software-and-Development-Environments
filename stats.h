@@ -10,9 +10,9 @@
  *****************************************************************************/
 /**
  * @file stats.h
- * @brief functions declarations to be used in stats.c
+ * @brief functions for statistical measures
  *
- * <Add Extended Description Here>
+ * This file contains function declarations that are to be used by stats.c
  *
  * @author Aaditya Mukherjee
  * @date 19/07/2026
@@ -24,17 +24,90 @@
 /* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Function to print the computed statistics 
  *
- * <Add Extended Description Here>
+ * This function prints the statistics that have been computed by the other functions.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param median takes the median of the array in floating type
+ * @param mean takes the mean of the array in floating type
+ * @param max takes the max of the array in integer type
+ * @param min takes the min of the array in integer type
  *
- * @return <Add Return Informaiton here>
+ * @return void
  */
+void print_statistics(float median, float mean, int max, int min);
+
+/**
+ * @brief Function to print an array
+ *
+ * Prints out the inputted array
+ *
+ * @param arr takes the pointer of  an interger array
+ * @param n takes the length of the array
+ *
+ * @return void
+ */
+void print_array(int* arr, int n);
+
+/**
+ * @brief function to compute median
+ *
+ * This function computes the median of an inputted integer array
+ *
+ * @param arr takes the pointer of  an interger array
+ * @param n takes the length of the array
+ *
+ * @return the median of the array
+ */
+float find_median(int* arr, int n);
+
+/**
+ * @brief Function to compute the mean
+ *
+ * This function computes the mean of the inputted array
+ *
+ * @param arr takes the pointer of  an interger array
+ * @param n takes the length of the array
+ *
+ * @return the mean of the array
+ */
+float find_mean(int* arr, int n);
+
+/**
+ * @brief Function to compute the maximum of an array
+ *
+ * This function finds the maximum of the inputted array
+ *
+ * @param arr takes the pointer of  an interger array
+ * @param n takes the length of the array
+ *
+ * @return the largest element of the array
+ */
+int find_maximum(int* arr, int n);
+
+/**
+ * @brief Function to compute the minimum of an array
+ *
+ * This function finds the minimum of the inputted array
+ *
+ * @param arr takes the pointer of  an interger array
+ * @param n takes the length of the array
+ *
+ * @return the smallest element of the array
+ */
+int find_minimum(int* arr, int n);
+
+/**
+ * @brief Function to sort an array
+ *
+ * Function to sort the inputted array using selection sort
+ *
+ * @param arr takes the pointer of  an interger array
+ * @param n takes the length of the array
+ *
+ * @return void
+ */
+void sort_array(int* arr, int n);
 
 
 #endif /* __STATS_H__ */
