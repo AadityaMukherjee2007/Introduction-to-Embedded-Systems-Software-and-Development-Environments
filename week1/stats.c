@@ -38,8 +38,11 @@ void main() {
     /* Other Variable Declarations Go Here */
     /* Statistics and Printing Functions Go Here */
     print_array(test, SIZE);
+    printf("Sorted Array: ");
     sort_array(test, SIZE);
     print_array(test, SIZE);
+
+    printf("\n");
 
     print_statistics(find_median(test, SIZE), find_mean(test, SIZE), find_maximum(test, SIZE), find_minimum(test, SIZE));
 }
@@ -119,6 +122,7 @@ unsigned char find_minimum(unsigned char* arr, int n)
 
 void sort_array(unsigned char* arr, int n)
 {
+    // implemented selection sort
     int i, j;
     for (i = 0; i < n - 1; i++)
     {
